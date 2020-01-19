@@ -19,7 +19,7 @@ namespace DebugECS
 			ConnectionServer connection = new ConnectionServer();
 			connection.DataReceived += Connection_DataReceived;
 			connection.Connect();
-			while (true)
+			while (true) 
 			{
 			}
 		}
