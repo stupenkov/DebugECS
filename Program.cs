@@ -29,12 +29,17 @@ namespace DebugECS
 			Console.Clear();
 			foreach (var item in e)
 			{
+				Console.BackgroundColor = ConsoleColor.Yellow;
+				Console.ForegroundColor = ConsoleColor.DarkRed;
 				Console.WriteLine(item.Entity);
 				foreach (var i in item.EntityComponents)
 				{
+					Console.BackgroundColor = ConsoleColor.Black;
+					Console.ForegroundColor = ConsoleColor.Cyan;
 					Console.WriteLine("\t" + i.Key + "  ");
 					foreach (var v in i.Value)
 					{
+						Console.ForegroundColor = ConsoleColor.White;
 						Console.WriteLine("\t\t" + v + " ");
 					}
 				}
